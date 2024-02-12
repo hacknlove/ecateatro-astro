@@ -1,0 +1,54 @@
+---
+const imgs = Astro.props.imgs;
+---
+
+<section id="masonry">
+  {
+    imgs.map((img) => {
+      return (
+        <img loading="lazy" src={img.src} srcset={img.srcset} alt={img.alt} />
+      );
+    })
+  }
+</section>
+<script lang="javascript">
+  document.querySelector("#masonry").addEventListener("click", (event) => {
+    if (event.target.tagName !== "IMG") {
+      return;
+    }
+    if (!event.target.closest("#masonry")) {
+      return;
+    }
+
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      return;
+    }
+    event.target.requestFullscreen();
+  });
+</script>
+<style lang="scss">
+  section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 0.5rem;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 1rem 0.2rem #000;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 2rem 0.4rem #000;
+      }
+    }
+
+    margin: 100px 1rem 100px;
+  }
+</style>

@@ -1,0 +1,105 @@
+<nav>
+  <a href="/" class="logo">
+    <picture>
+      <source
+        type="image/avif"
+        srcset="
+			/Web/Logo.jpg?width=160&as=avif 160w,
+			/Web/Logo.jpg?width=120&as=avif 120w,
+			/Web/Logo.jpg?width=180&as=avif 180w,
+			/Web/Logo.jpg?width=320&as=avif 320w
+		  "
+      />
+      <source
+        type="image/webp"
+        srcset="
+			/Web/Logo.jpg?width=160&as=webp 160w,
+			/Web/Logo.jpg?width=120&as=webp 120w,
+			/Web/Logo.jpg?width=180&as=webp 180w,
+			/Web/Logo.jpg?width=320&as=webp 320w
+		  "
+      />
+
+      <img
+        src="/Web/Logo.jpg?width=160"
+        srcset="
+			/Web/Logo.jpg?width=160 160w,
+			/Web/Logo.jpg?width=120 120w,
+			/Web/Logo.jpg?width=180 180w,
+			/Web/Logo.jpg?width=320 320w
+		  "
+        alt="Logo ECA Teatro"
+        width="160"
+        height="123"
+      />
+    </picture>
+  </a>
+  <a href="/espectaculos"> Espectáculos</a><a href="/fechas">Fechas</a>
+  <a href="/historia">Historia</a>
+  <a href="/contactar">Contactar</a>
+</nav>
+<style lang="scss">
+  nav {
+    padding: 1rem 2rem;
+
+    a.logo {
+      position: absolute;
+      right: 30px;
+      top: 0;
+      z-index: 3;
+    }
+
+    background: #0001;
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+
+    img {
+      display: block;
+      width: 160px;
+    }
+
+    a:not(.logo) {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-shadow: 1px 1px 1px #000;
+      font-family: sans-serif;
+      border-bottom: 3px solid #0000;
+
+      &:hover,
+      &.header--active {
+        color: rgb(142, 79, 250);
+        border-bottom: 3px solid #718700;
+        position: relative;
+      }
+    }
+
+    box-shadow: 0 0 6rem -1rem #0004;
+
+    @media (max-width: 855px) {
+      row-gap: 1rem;
+
+      a:not(.logo) {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 738px) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      a.logo {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        img {
+          width: 120px;
+          height: 92.25px;
+        }
+      }
+    }
+  }
+</style>

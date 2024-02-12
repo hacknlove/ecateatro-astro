@@ -1,0 +1,54 @@
+---
+import Basic from "@/layouts/Basic.astro";
+import Header from "@/components/Header.astro";
+import Masonry from "@/components/Masonry.astro";
+---
+
+<Basic
+  title="ECA Teatro"
+  description="Información sobre los espectáculos de ECA Teatro"
+  keywords="teatro, teatro amateur, espectáculos"
+  ogImage="https://ecateatro.es/IMG20210508183012.6c0fb45d.jpeg"
+>
+  <img
+    src="/images/curtain-gde16c011f_1280.png"
+    alt="contactar"
+    class="background-image"
+  />
+  <Header />
+  <main>
+    <h1>ECA TEATRO</h1>
+    <p>
+      El grupo amateur ECA Teatro nace en Oviedo (Asturias) en el verano del año
+      2019, como resultado del compromiso de buena parte de los alumnos de
+      formación actoral de la Escuela Goli Goli Teatro, creada y dirigida por
+      Estela Valverde.
+    </p>
+    <p>
+      La historia del grupo es por ahora corta. Nuestra ilusión, inmensa.
+      Tenemos potencial y muchas ganas de crecer y desarrollar nuestra
+      creatividad. Queremos hacer un trabajo digno, elegir obras que digan cosas
+      de hoy y de siempre y que gusten a públicos diversos de todas las edades.
+      Y todo ello sin dejar de divertirnos, disfrutando de cada ensayo y cada
+      actuación.
+    </p>
+    <p>
+      Nuestra formación actoral continúa en múltiples campos: expresión
+      corporal, técnicas de voz, de clown, trabajos de investigación, lecturas,
+      etc. Los componentes de ECA Teatro procedemos de distintos lugares y
+      campos profesionales, pero a todos nos une el amor por el teatro y la
+      interpretación y un profundo respeto por la cultura. Y de nuestra afición,
+      queremos hacer algo grande.
+    </p>
+  </main>
+  <Masonry
+    imgs={[
+      {
+        src: "/Web/FotosGrupo/_D_L8327.jpg",
+      },
+      {
+        src: "/Web/FotosGrupo/IMG20210508183012.jpg",
+      },
+    ]}
+  />
+</Basic>

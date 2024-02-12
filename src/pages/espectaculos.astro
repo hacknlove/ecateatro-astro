@@ -1,0 +1,95 @@
+---
+import Basic from "@/layouts/Basic.astro";
+import Header from "@/components/Header.astro";
+---
+
+<Basic
+  title="ECA Teatro"
+  description="Información sobre los espectáculos de ECA Teatro"
+  keywords="teatro, teatro amateur, espectáculos"
+  ogImage="https://ecateatro.es/IMG20210508183012.6c0fb45d.jpeg"
+>
+  <img
+    src="/images/curtain-gde16c011f_1280.png"
+    alt="contactar"
+    class="background-image"
+  />
+  <Header />
+  <main>
+    <h1>Espectáculos</h1>
+    <p>Para ver los detalles de cada espectáculo, haz click en el cartel.</p>
+    <div class="cartelera">
+      <a href="/espectaculos/los-afanes-del-veraneo" class="cartel">
+        <img
+          src="/Web/CartelVeraneo.jpg?width=640"
+          srcset="
+                /Web/CartelVeraneo.jpg?width=640   640w,
+                /Web/CartelVeraneo.jpg?width=768   768w,
+                /Web/CartelVeraneo.jpg?width=1024 1024w,
+                /Web/CartelVeraneo.jpg?width=1366 1366w,
+                /Web/CartelVeraneo.jpg?width=1600 1600w,
+                /Web/CartelVeraneo.jpg?width=1920 1920w
+              "
+          alt="Los Afanes del Veraneo"
+          role="heading"
+          aria-level="2"
+        />
+      </a>
+      <a href="/espectaculos/lisistrata" class="cartel">
+        <img
+          src="/Web/CartelLisistrata.jpg?width=640"
+          srcset="
+                /Web/CartelLisistrata.jpg?width=640   640w,
+                /Web/CartelLisistrata.jpg?width=768   768w,
+                /Web/CartelLisistrata.jpg?width=1024 1024w,
+                /Web/CartelLisistrata.jpg?width=1366 1366w,
+                /Web/CartelLisistrata.jpg?width=1600 1600w,
+                /Web/CartelLisistrata.jpg?width=1920 1920w
+              "
+          alt="Lisitrata 2.0"
+          role="heading"
+          aria-level="2"
+        />
+      </a>
+      <a href="/espectaculos/de-jardiel-a-poncela" class="cartel">
+        <img
+          src="/Web/CartelJardiel.jpg?width=640"
+          srcset="
+                /Web/CartelJardiel.jpg?width=640   640w,
+                /Web/CartelJardiel.jpg?width=768   768w,
+                /Web/CartelJardiel.jpg?width=1024 1024w,
+                /Web/CartelJardiel.jpg?width=1366 1366w,
+                /Web/CartelJardiel.jpg?width=1600 1600w,
+                /Web/CartelJardiel.jpg?width=1920 1920w
+              "
+          alt="De Jardiel a Poncela, Encuentros y Desencuentros"
+          role="heading"
+          aria-level="2"
+        />
+      </a>
+    </div>
+  </main>
+
+  <script type="module" src="../js/headerScroll.js"></script>
+</Basic>
+
+<style lang="scss">
+  .cartelera {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Adjust 300px to the minimum width you want each grid item to be */
+    gap: 1rem;
+    /* CSS grid uses 'gap' instead of 'column-gap' */
+    margin: 20px 0;
+  }
+
+  .cartel {
+    max-width: 900px;
+    position: relative;
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+</style>

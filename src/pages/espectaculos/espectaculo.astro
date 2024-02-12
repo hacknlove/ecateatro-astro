@@ -1,0 +1,93 @@
+---
+import Basic from "@/layouts/Basic.astro";
+import Header from "@/components/Header.astro";
+import Masonry from "@/components/Masonry.astro";
+---
+
+<Basic
+  title="ECA Teatro"
+  description="Información sobre los espectáculos de ECA Teatro"
+  keywords="teatro, teatro amateur, espectáculos"
+  ogImage="https://ecateatro.es/IMG20210508183012.6c0fb45d.jpeg"
+>
+  <Header />
+  <main>
+    <h1>Los Afanes del Veraneo</h1>
+    <ul class="lista">
+      <li><strong>Pablo y Paco:</strong> Andrés Fernández Gonzalo</li>
+      <li><strong>Leonardo:</strong> Iván Lorenzo Buján</li>
+      <li><strong>Victoria:</strong> Isabel Arias Fernández</li>
+      <li><strong>Fernando:</strong> Antonio González Fernández</li>
+      <li><strong>Felipa:</strong> Soledad Pozuelo Paje</li>
+      <li><strong>Jacinta:</strong> Lourdes Muñiz Banciella</li>
+      <li><strong>Brígida:</strong> Andrés Fernández Gonzalo</li>
+      <li><strong>Guillermo:</strong> Antonio González Fernández</li>
+      <li><strong>Fulgencio:</strong> Antonio González Fernández</li>
+    </ul>
+
+    <ul class="lista">
+      <li>
+        <strong>Diseño de Luz:</strong> Fernando Llorian y Estela Valverde
+      </li>
+      <li>
+        <strong>Diseño de Escenografía y ambientación:</strong> Jess Fernández
+      </li>
+      <li><strong>Arreglos vestuario:</strong> Soledad Pozuelo</li>
+      <li>
+        <strong>Diseño de Cartelería:</strong> Lourdes Muñiz y Jess Fernández
+      </li>
+      <li><strong>Video y Fotografía:</strong> Roberto García</li>
+    </ul>
+
+    <ul class="lista">
+      <li>
+        <strong>Puesta en Escena, dramaturgia y Dirección :</strong> Estela Valverde
+        Marcos
+      </li>
+    </ul>
+
+    <article>
+      <h2>Sinopsis:</h2>
+
+      <p>
+        Dos familias acomodadas preparan el veraneo. Los criados no dan abasto,
+        todo es hacer y deshacer, un ajetreo de maletas, baúles, recados y cosas
+        por preparar. Todo está preparado para salir, las familias viajarán
+        juntos, pero algo tan trivial como la falta de un vestido inicia el
+        cambio de planes. Si a esto le unimos los celos, las envidias, los
+        enfados..., el enredo está servido. Esclavos de la moda, servidores de
+        dinero... cada cual es reflejado en su sueño vano y en su idiotez de
+        miras ramplonas. Lo que importa es la apariencia y seguir manteniendo un
+        estatus antes de asumir, que las cosas han cambiado.
+      </p>
+    </article>
+  </main>
+  <Masonry
+    imgs={[
+      {
+        src: "/Web/FotosVeraneo/_D_L9129.jpg",
+        alt: "Los Afanes del Veraneo",
+      },
+      {
+        src: "/Web/FotosVeraneo/_D_L9209.jpg",
+        alt: "Los Afanes del Veraneo",
+      },
+      {
+        src: "/Web/FotosVeraneo/_D_L9213.jpg",
+        alt: "Los Afanes del Veraneo",
+      },
+      {
+        src: "/Web/FotosVeraneo/_DSC1970.jpg",
+        alt: "Los Afanes del Veraneo",
+      },
+      {
+        src: "/Web/FotosVeraneo/_DSC1979.jpg",
+        alt: "Los Afanes del Veraneo",
+      },
+      {
+        src: "/Web/FotosVeraneo/_DSC2004.jpg",
+        alt: "Los Afanes del Veraneo",
+      },
+    ]}
+  />
+</Basic>
